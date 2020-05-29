@@ -1,0 +1,36 @@
+<%- include("../partials/header.ejs")-%>
+
+<div class="container">
+    <h2 class="title">List users</h2>
+
+    <h4> <a href="/tasks/create">Create new Tasks</a></h4>
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">View</th>
+                <th scope="col">Edit  </th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <% tasks.forEach((e) => { %>
+            <tbody>
+              <tr>
+
+                <td><%= e.title %></td>
+                <td><%= e.description %></td>
+                <td><a href="/tasks/<%= e.id %>/edit">Edit</a></td>
+                <td><a href="/tasks/<%= e.id %>">View</a></td>
+                <td>
+                  <form action="/tasks/<%= e.id %>/delete" method="POST">
+                    <button>Delete</button>
+                  </form>
+                </td>
+              </tr>
+            </tbody>
+            <% }) %>
+          </table>
+
+</div>
