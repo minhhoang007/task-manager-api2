@@ -1,0 +1,47 @@
+/* index file  */
+.my-center {
+    color: #427bff;
+}
+
+.my-container {
+    align-items: center !important;
+    justify-content: space-between;
+}
+
+.link-item {
+    text-transform: capitalize;
+    margin-left: 2rem;
+}
+
+.my-card-title {
+    text-transform: capitalize;
+}
+
+/* new file  */
+.form-center {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   align-items: flex-end;
+}
+
+/* boook view */
+.title {
+   text-transform: capitalize;
+    text-align: center;
+    color: rgba(53, 48, 48, 0.87);
+}
+.title--end {
+    margin-top: 2rem;
+    margin-right: 1rem;
+    text-align: end;
+    color: rgba(53, 48, 48, 0.87);
+}
+
+.subtitle {
+    text-transform: capitalize;
+}
+
+.card{
+    height: auto;
+}

@@ -1,0 +1,11 @@
+<%- include("../partials/header.ejs")-%>
+
+<div class="container">
+
+  <% if (errors ){ %>
+    <% for (let e in errors) { %>
+      <p class="alert alert-danger"><%=  errors[e] %></p>
+    <% } %>
+  <% } %>
+  <p>Please email or contact us for authentic your account</p>
+</div>

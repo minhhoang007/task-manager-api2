@@ -1,0 +1,36 @@
+<%- include("../partials/header.ejs")-%>
+
+<div class="container">
+    <h2 class="title">List users</h2>
+
+    <h4> <a href="/users/create">Create new User</a></h4>
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Users Name</th>
+                <th scope="col">View</th>
+                <th scope="col">Edit  </th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <% users.forEach((e) => { %>
+            <tbody>
+              <tr>
+
+                <td><%= e.id %></td>
+                <td><%= e.name %></td>
+                <td><a href="/users/<%= e.id %>/edit">Edit</a></td>
+                <td><a href="/users/<%= e.id %>/avatar">Avatar</a></td>
+                <td>
+                  <form action="/users/<%= e.id %>/delete" method="POST">
+                    <button>Delete</button>
+                  </form>
+                </td>
+              </tr>
+            </tbody>
+            <% }) %>
+          </table>
+
+</div>
